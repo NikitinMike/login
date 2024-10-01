@@ -1,0 +1,24 @@
+{
+  "originHash" : "9c1ce1d05d85ab0e51ed6cde6a0e260fb47391eff707000b7809bb4bde8b825c",
+  "pins" : [
+    {
+      "identity" : "okhttpclient",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rmichelberger/OkHttpClient/",
+      "state" : {
+        "revision" : "4b16a0f97e814132326e76479fe90e2f9fc962a2",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "retroswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rmichelberger/RetroSwift",
+      "state" : {
+        "revision" : "545625e2343f42e65dda466b701ad25a504cc3c6",
+        "version" : "1.0.1"
+      }
+    }
+  ],
+  "version" : 3
+}

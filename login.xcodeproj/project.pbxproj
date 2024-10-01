@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		877678172CABEFD7005DEFFF /* RetroSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 877678162CABEFD7005DEFFF /* RetroSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		87800A492C9D7A5E00F70E2C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				877678172CABEFD7005DEFFF /* RetroSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = login;
 			packageProductDependencies = (
+				877678162CABEFD7005DEFFF /* RetroSwift */,
 			);
 			productName = login;
 			productReference = 87800A382C9D7A5800F70E2C /* login.app */;
@@ -170,6 +176,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
@@ -195,6 +204,10 @@
 			);
 			mainGroup = 87800A2F2C9D7A5800F70E2C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8774C3272CABF28F006AED48 /* XCRemoteSwiftPackageReference "RetroSwift" */,
+				8774C32B2CABF923006AED48 /* XCRemoteSwiftPackageReference "OkHttpClient" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 87800A392C9D7A5800F70E2C /* Products */;
 			projectDirPath = "";
@@ -558,6 +571,34 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8774C3272CABF28F006AED48 /* XCRemoteSwiftPackageReference "RetroSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rmichelberger/RetroSwift";
+			requirement = {
+				kind = versionRange;
+				maximumVersion = 2.0.0;
+				minimumVersion = 1.0.1;
+			};
+		};
+		8774C32B2CABF923006AED48 /* XCRemoteSwiftPackageReference "OkHttpClient" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rmichelberger/OkHttpClient/";
+			requirement = {
+				kind = versionRange;
+				maximumVersion = 2.0.0;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		877678162CABEFD7005DEFFF /* RetroSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RetroSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 87800A302C9D7A5800F70E2C /* Project object */;
 }
