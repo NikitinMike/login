@@ -27,10 +27,12 @@ struct ContentView: View {
         request.setValue("iYOBA Client 2.0", forHTTPHeaderField: "user-agent")
         let task = URLSession.shared.dataTask(with: request) {
             (data, response, error) in guard let data = data else { return }
-            text = Date.now.formatted(date: .omitted, time: .standard) + ":" + (String(data: data, encoding: .utf8)!)
+            text = Date.now.formatted(date: .omitted, time: .standard) + " " + (String(data: data, encoding: .utf8)!)
+            text.replace("\",\"", with:"\n")
+            text.replace("\":\"", with:" : ")
         }
         task.resume()
-        print(YOBAClient().getText(url: url))
+//        print(YOBAClient().getText(url: url))
     }
 
 }
