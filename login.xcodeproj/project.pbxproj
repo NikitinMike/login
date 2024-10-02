@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8730C3C22CAC1D1D001016BF /* OkHttpClient in Frameworks */ = {isa = PBXBuildFile; productRef = 8730C3C12CAC1D1D001016BF /* OkHttpClient */; };
 		877678172CABEFD7005DEFFF /* RetroSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 877678162CABEFD7005DEFFF /* RetroSwift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				877678172CABEFD7005DEFFF /* RetroSwift in Frameworks */,
+				8730C3C22CAC1D1D001016BF /* OkHttpClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +120,7 @@
 			name = login;
 			packageProductDependencies = (
 				877678162CABEFD7005DEFFF /* RetroSwift */,
+				8730C3C12CAC1D1D001016BF /* OkHttpClient */,
 			);
 			productName = login;
 			productReference = 87800A382C9D7A5800F70E2C /* login.app */;
@@ -594,6 +597,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8730C3C12CAC1D1D001016BF /* OkHttpClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8774C32B2CABF923006AED48 /* XCRemoteSwiftPackageReference "OkHttpClient" */;
+			productName = OkHttpClient;
+		};
 		877678162CABEFD7005DEFFF /* RetroSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RetroSwift;

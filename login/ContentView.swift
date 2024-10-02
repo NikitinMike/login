@@ -22,11 +22,6 @@ struct ContentView: View {
         .padding()
     }
         
-    func test(url: String) async {
-        let text = try! await Retro().getItem(url:url)
-        print(text)
-    }
-    
     func getText(url : String) {
         var request = URLRequest(url:URL(string: url)!)
         request.setValue("iYOBA Client 2.0", forHTTPHeaderField: "user-agent")
@@ -38,7 +33,9 @@ struct ContentView: View {
         }
         task.resume()
         // print(YOBAClient().getText(url: url))
-//        try await test()
+        Task {
+            text = try! await Retro().getItem(url:url)
+        }
     }
     
 }
