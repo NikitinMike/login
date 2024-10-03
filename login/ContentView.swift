@@ -18,7 +18,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text(time)
-            Button("", systemImage: "brain", action: {getText(url: url)})
+            Button("", systemImage: "brain", action: {getTextItem(url: url)})
                 .imageScale(.large)
                 .foregroundStyle(.indigo)
                 .font(.system(size: 44))
@@ -28,6 +28,15 @@ struct ContentView: View {
         .padding()
     }
          
+    func getTextItem(url : String) {
+        Task {
+            time = Date.now.formatted(date: .omitted, time: .standard)
+            let item = try await Retro().getItem(url: url)
+            print(item)
+            text = "\(item.xrealip) \(item.useragent)"
+        }
+    }
+    
     func getText(url : String) {
         var request = URLRequest(url:URL(string: url)!)
         request.setValue("iYOBA Client 2.0", forHTTPHeaderField: "user-agent")
@@ -39,7 +48,6 @@ struct ContentView: View {
 //            text.replace("\":\"", with:" : ")
         }
         task.resume()
-        // print(YOBAClient().getText(url: url))
     }
     
 }
