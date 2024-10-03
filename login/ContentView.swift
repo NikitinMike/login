@@ -18,7 +18,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text(time)
-            Button("", systemImage: "brain", action: {getTextItem(url: url)})
+            Button("", systemImage: "brain", action: {getItem(url: url)})
                 .imageScale(.large)
                 .foregroundStyle(.indigo)
                 .font(.system(size: 44))
@@ -28,7 +28,7 @@ struct ContentView: View {
         .padding()
     }
          
-    func getTextItem(url : String) {
+    func getItem(url : String) {
         Task {
             time = Date.now.formatted(date: .omitted, time: .standard)
             let item = try await Retro().getItem(url: url)
